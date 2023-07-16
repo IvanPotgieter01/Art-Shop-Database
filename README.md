@@ -115,32 +115,32 @@ The system will be developed using Oracle. It will be designed using industry be
 ![ERD](https://github.com/IvanPotgieter01/ArtShop/assets/109952133/04d8d832-1d71-4299-98dc-50d66db02069)
 
 ## Notes on ER Diagram
-1.	Weak relationships:
+### 1.	Weak relationships:
 * Between CUSTOMER and ORDERS. The FK customer_id does not form part of the primary key of the ORDERS entity (order_id).
 * Between PACKAGING and ORDERS. The FK packaging_id does not form part of the primary key of the ORDERS entity (order_id).
 
-2.	Strong relationships:
+### 2.	Strong relationships:
 * Between CATEGORY and ART_PIECE_CATEGORY. The FK category_id forms part of the primary key of the ART_PIECE_CATEGORY entity (Composite primary key consisting of category_id and art_piece_id).
 * Between ART_PIECE and ART_PIECE_CATEGORY. The FK art_piece_id forms part of the primary key of the ART_PIECE_CATEGORY entity (Composite primary key consisting of category_id and art_piece_id).
 * Between FRAME and ORDER_DETAIL. The FK frame_id forms part of the primary key of the ORDER_DETAIL entity (Composite primary key consisting of frame_id, art_piece_id and order_id).
 * Between ART_PIECE and ORDER_DETAIL. The FK art_piece_id forms part of the primary key of the ORDER_DETAIL entity (Composite primary key consisting of frame_id, art_piece_id and order_id).
 * Between ORDERS and ORDER_DETAIL. The FK order_id forms part of the primary key of the ORDER_DETAIL entity (Composite primary key consisting of frame_id, art_piece_id and order_id).
 
-3.	Weak entities:
+### 3.	Weak entities:
 * ORDER_DETAIL (this entity is dependent on the ORDERS and ART_PIECE entities to exist)
 
-4.	Composite/ bridge entities:
+### 4.	Composite/ bridge entities:
 * ART_PIECE_CATEGORY entity
 * ORDER_DETAIL entity
 
-5.	Composite keys:
+### 5.	Composite keys:
 * Composite primary key consisting of category_id and art_piece_id (ART_PIECE_CATEGORY entity).
 * Composite primary key consisting of frame_id, art_piece_id and order_id (ORDER_DETAIL entity).
 
-6.	Optional relationships:
+### 6.	Optional relationships:
 * An instance of ORDERS entity may or may not be associated with an instance of FRAME entity.
 
-7.	Mandatory relationships:
+### 7.	Mandatory relationships:
 * The relationship between ART_PIECE and it two subtypes (LINE_ART and ABSTRACT_ART).
 
 
